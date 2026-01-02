@@ -27,7 +27,16 @@ Extension Manifest V3 giúp tự động điền prompt và kích hoạt render 
   - Ratio: `select#ratio`
   - Wait Time: `input#waitTime`
   - Auto Download: `input#autoDownload`
-  - Vùng trạng thái: `.log-window, .status`
+- Vùng trạng thái: `.log-window, .status`
+
+## Xuất gói extension (.zip)
+Bạn có thể đóng gói thư mục `extension/` thành file zip để cài đặt hoặc chia sẻ:
+
+```bash
+./package_extension.sh
+```
+
+Script sẽ tạo thư mục `dist/` (nếu chưa có) và sinh file `auto-flow-extension.zip` chứa toàn bộ nội dung trong `extension/`.
 
 ## Lưu ý
 - Chỉnh `host_permissions` trong `manifest.json` đúng domain Google Flow thực tế.
