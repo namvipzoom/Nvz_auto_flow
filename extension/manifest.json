@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "NVZ Auto Flow",
+  "description": "Tự động nhập prompt và kích hoạt render video trên Google Flow.",
+  "version": "1.0.0",
+  "permissions": ["scripting", "activeTab", "storage", "tabs"],
+  "host_permissions": ["*://flow.google.com/*", "*://*.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Chạy Auto Flow"
+  },
+  "options_page": "options.html"
+}
