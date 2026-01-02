@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NVZ Auto Flow - Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="title">
+          <div>
+            <h1>NVZ Auto Flow</h1>
+            <p>Cấu hình prompt và thao tác tự động cho Google Flow.</p>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <label for="prompts">Danh sách prompt (mỗi dòng 1 prompt)</label>
+        <textarea id="prompts" rows="6" placeholder="Prompt 1\nPrompt 2"></textarea>
+        <small>Prompt sẽ được thêm tuần tự vào queue rồi bấm START.</small>
+      </section>
+
+      <section class="grid">
+        <label>
+          Tỷ lệ video (ratio)
+          <input id="ratio" type="text" placeholder="16:9" />
+        </label>
+        <label>
+          Thời gian chờ (Wait Time, giây)
+          <input id="waitTime" type="number" min="0" step="1" />
+        </label>
+        <label class="checkbox">
+          <input id="autoDownload" type="checkbox" />
+          Bật Auto Download
+        </label>
+      </section>
+
+      <section>
+        <details>
+          <summary>Tuỳ chỉnh selector (advanced)</summary>
+          <p>Nếu Google Flow đổi giao diện, cập nhật selector cho đúng DOM thực tế.</p>
+          <div class="grid selectors">
+            <label>Prompt box <input id="selector-prompt" type="text" /></label>
+            <label>Nút Add <input id="selector-add" type="text" /></label>
+            <label>Nút START <input id="selector-start" type="text" /></label>
+            <label>Dropdown Ratio <input id="selector-ratio" type="text" /></label>
+            <label>Wait Time input <input id="selector-wait" type="text" /></label>
+            <label>Auto Download checkbox <input id="selector-auto" type="text" /></label>
+            <label>Vùng trạng thái <input id="selector-status" type="text" /></label>
+          </div>
+        </details>
+      </section>
+
+      <footer>
+        <button id="save">Lưu cấu hình</button>
+        <span id="status" aria-live="polite"></span>
+      </footer>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
